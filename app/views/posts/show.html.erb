@@ -21,6 +21,12 @@
 
 <div id="comments">
     <%= render 'comments/form', comment: @comment %>
+    <% @post.comments.each do |comment| %>
+        <p>
+	    <%= comment.author %> said...<br />
+	    <%= comment.comment_entry %>
+	</p>
+    <% end %>
 </div>
 
 <p>
