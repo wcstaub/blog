@@ -13,7 +13,8 @@
   <% @posts.each do |post| %>
     <div class="panel panel-default">
     
-      <div class="panel-heading"> <%= post.title %> by <%= post.author %></div>
+      <!-- <div class="panel-heading"> <%= post.title %> by <%= post.author %></div> -->
+      <p>by <%= post.user.email %></p>
       <div class="panel-body"><%= post.blog_entry %></div>
       <div class="panel-footer">
           <button class="btn btn-primary"><%= link_to 'Show', post %></button>
