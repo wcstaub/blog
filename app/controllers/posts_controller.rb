@@ -3,16 +3,12 @@ class PostsController < ApplicationController
 
   # GET /posts
   # GET /posts.json
-  def user_posts
-    # what should go in here?
-  end
-
-   def index
+  def index
     @posts = Post.all.page(params[:page])
   end
 
-  def index
-    @posts = Post.all
+  def user_posts
+     @user = User.find_by(username: params[:name])
   end
 
   # GET /posts/1

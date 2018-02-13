@@ -10,11 +10,12 @@
  
 <body>
   <h1>Current Blog Posts</h1>
+  <!-- Could do All Posts by  post.user.username-->
   <% @posts.each do |post| %>
     <div class="panel panel-default">
     
-      <!-- <div class="panel-heading"> <%= post.title %> by <%= post.author %></div> -->
-      <p>by <%= post.user.username %></p>
+      <h3><%= post.title %></h3>
+        <p>by <em><%= link_to post.user.username, user_posts_path(name: post.user.username) %></em></p>
       <div class="panel-body"><%= post.blog_entry %></div>
       <div class="panel-footer">
           <button class="btn btn-primary"><%= link_to 'Show', post %></button>
