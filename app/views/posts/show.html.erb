@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <%= @post.blog_entry.html_safe %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @post.title %>
 </p>
